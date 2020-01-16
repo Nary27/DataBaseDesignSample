@@ -8,7 +8,6 @@
 |username|string|null: false|
 ### Assosiation
 - has_many :messages
-- has_many :replies
 - has many :groups_users
 - has_many :groups, through:  :groups_users
 
@@ -16,11 +15,11 @@
 Column|Type|Options|
 |------|----|-------|
 |name|string|null: false|
-|user_id|integer|null: false, foreign_key: true|
-|user_name|string|null: false, foreign_key: true|
+
 ### Assosiation
 - has_many :groups_users
 - has_many :users, through: :groups_users
+- has_many :messages
 
 ## groups_usersテーブル
 |Column|Type|Options|
